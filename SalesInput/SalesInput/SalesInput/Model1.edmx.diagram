@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eec8e2ab0aa24254b8a00932e4dd35e1" Name="Diagram1" ZoomLevel="66">
+        <EntityTypeShape EntityType="FL00SSModel.AllowanceA" Width="1.5" PointX="14.75" PointY="43.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.AllowanceB" Width="1.5" PointX="17" PointY="43.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.AllowanceDetail" Width="1.5" PointX="22.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BACSETA" Width="1.5" PointX="41.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BACSETB" Width="1.5" PointX="44" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BADP" Width="1.5" PointX="2.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BarCodeScaleA" Width="1.5" PointX="41.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BarCodeScaleB" Width="1.5" PointX="44" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BB2" Width="1.5" PointX="5.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BBNK" Width="1.5" PointX="3" PointY="64.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCDX" Width="1.5" PointX="4.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCUG" Width="1.5" PointX="3" PointY="67.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCU" Width="1.5" PointX="0.75" PointY="162.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCUSSALE" Width="1.5" PointX="8.25" PointY="131.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCVB" Width="1.5" PointX="17.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCVP" Width="1.5" PointX="34.75" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCVPSetBCDA5History" Width="1.5" PointX="8.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCVPUpgrade" Width="1.5" PointX="9.75" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BCVR" Width="1.5" PointX="3.75" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BDEP" Width="1.5" PointX="3" PointY="73.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BDPT" Width="1.5" PointX="13.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BINT" Width="1.5" PointX="3" PointY="78" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONU" Width="1.5" PointX="41.75" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONUSFL2" Width="1.5" PointX="31.75" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONUSFL3" Width="1.5" PointX="17.75" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONUSFL4" Width="1.5" PointX="26.75" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONUSFL5" Width="1.5" PointX="28.75" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BonusSet" Width="1.5" PointX="15.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONUSSETA" Width="1.5" PointX="31.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONUSSETBRAT" Width="1.5" PointX="34" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONUSSETBWT" Width="1.5" PointX="34" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BonusSpecA" Width="1.5" PointX="40.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BonusSpecB" Width="1.5" PointX="10.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BPSN" Width="1.5" PointX="3" PointY="81.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BRPA" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BRPB" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BRPC" Width="1.5" PointX="1.5" PointY="92.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BRPDA" Width="1.5" PointX="3.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BRPDB" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSDA" Width="1.5" PointX="30.75" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSDAT" Width="1.5" PointX="43.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSDB" Width="1.5" PointX="43.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSDC" Width="1.5" PointX="42.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSDM" Width="1.5" PointX="43.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSDX" Width="1.5" PointX="19.75" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSGR" Width="1.5" PointX="21.75" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSGRCL" Width="1.5" PointX="23.75" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSHA" Width="1.5" PointX="24.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSHB" Width="1.5" PointX="27" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSNCRSetup" Width="1.5" PointX="43.75" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSQTY" Width="1.5" PointX="43.75" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSSA" Width="1.5" PointX="38.75" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSSB" Width="1.5" PointX="41" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTI" Width="1.5" PointX="5.25" PointY="84.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTL" Width="1.5" PointX="1.5" PointY="49.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTN" Width="1.5" PointX="1.5" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTO" Width="1.5" PointX="0.75" PointY="150.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTP" Width="1.5" PointX="6" PointY="173.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTP_RSWA" Width="1.5" PointX="3" PointY="168.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTR" Width="1.5" PointX="36.75" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTX" Width="1.5" PointX="43.75" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTXA" Width="1.5" PointX="1.5" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTXB" Width="1.5" PointX="38.75" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSWA" Width="1.5" PointX="44.75" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BTRX" Width="1.5" PointX="44.75" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BTRX_YD" Width="1.5" PointX="40.75" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BusinessClass" Width="1.5" PointX="45.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BusinessMethod" Width="1.5" PointX="45.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BusinessMethodType" Width="1.5" PointX="45.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BWEX" Width="1.5" PointX="39.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BWEXB" Width="1.5" PointX="42" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CalRSDALog" Width="1.5" PointX="45.75" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.Category" Width="1.5" PointX="45.75" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CategoryDescription" Width="1.5" PointX="45.75" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CLMoneyA" Width="1.5" PointX="38.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CLMoneyB" Width="1.5" PointX="41" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CLOrderA" Width="1.5" PointX="12.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CLOrderB" Width="1.5" PointX="15" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CLOrderC" Width="1.5" PointX="15" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CLOrderD" Width="1.5" PointX="15" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CloseBONU" Width="1.5" PointX="45.75" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CLOutA" Width="1.5" PointX="38.75" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CLOutB" Width="1.5" PointX="41" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CodeA" Width="1.5" PointX="38.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CodeB" Width="1.5" PointX="41" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CodeC" Width="1.5" PointX="38.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CodeD" Width="1.5" PointX="41" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.COMPANY" Width="1.5" PointX="45.75" PointY="43.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CompanyIntroduce" Width="1.5" PointX="45.75" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.Compensatory" Width="1.5" PointX="46.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CouponSet" Width="1.5" PointX="46.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CourtDeductionSet" Width="1.5" PointX="14.75" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CultureInfo" Width="1.5" PointX="9.75" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.Currency" Width="1.5" PointX="16.75" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CustBusiness" Width="1.5" PointX="18.75" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.DailyWork_history" Width="1.5" PointX="46.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.DailyWorkA" Width="1.5" PointX="5.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.DailyWorkB" Width="1.5" PointX="8" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.DailyWorkC" Width="1.5" PointX="10.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.DailyWorkD" Width="1.5" PointX="10.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.DDLeventLog" Width="1.5" PointX="25.75" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.dtproperty" Width="1.5" PointX="27.75" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.EinvoiceSeller" Width="1.5" PointX="42.75" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.EinvoiceTrackA" Width="1.5" PointX="29.75" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.EinvoiceTrackB" Width="1.5" PointX="32" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ErrorLog" Width="1.5" PointX="47.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.EventCalendar" Width="1.5" PointX="47.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.EventLog" Width="1.5" PointX="46.75" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.FAQ" Width="1.5" PointX="47.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.FLCLR" Width="1.5" PointX="47.75" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.FLCL" Width="1.5" PointX="47.75" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.FLPRO" Width="1.5" PointX="47.75" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.FunctionA" Width="1.5" PointX="8.25" PointY="152" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.FunctionB" Width="1.5" PointX="10.5" PointY="142.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.GroupA" Width="1.5" PointX="10.5" PointY="156.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.GroupAuthority" Width="1.5" PointX="12.75" PointY="151.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.GroupB" Width="1.5" PointX="47.75" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.HeaderAD" Width="1.5" PointX="47.75" PointY="43.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.HOUR" Width="1.5" PointX="47.75" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ItemToDownload" Width="1.5" PointX="48.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.LogData" Width="1.5" PointX="48.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.LogVersionSQL" Width="1.5" PointX="48.75" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.MarkupBinarySetup" Width="1.5" PointX="48.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.MenuA" Width="1.5" PointX="10.5" PointY="152.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.MenuB" Width="1.5" PointX="12.75" PointY="154.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.MenuCategory" Width="1.5" PointX="29.75" PointY="50.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.MenuCategoryDescription" Width="1.5" PointX="31.75" PointY="50.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.MenuContent" Width="1.5" PointX="44.75" PointY="50.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.MPLU" Width="1.5" PointX="49.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.MultiBSONU" Width="1.5" PointX="3" PointY="146.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.NETBWSA" Width="1.5" PointX="49.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.NETBWSB" Width="1.5" PointX="49.75" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.NewBonusElse" Width="1.5" PointX="49.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.NewBonusIWC" Width="1.5" PointX="49.75" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.NewHOUR" Width="1.5" PointX="50.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.NewMPLU" Width="1.5" PointX="49.75" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.OnlineQuestion" Width="1.5" PointX="14.75" PointY="52.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.OrganizationObject" Width="1.5" PointX="16.75" PointY="52.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.POSTransferInfo" Width="1.5" PointX="18.75" PointY="52.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.POSTransferRecord" Width="1.5" PointX="50.75" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.PreShiftTime" Width="1.5" PointX="50.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ProductClassInPOS" Width="1.5" PointX="3.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ProductClassInPOS_Store" Width="1.5" PointX="11.75" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ProductSet" Width="1.5" PointX="23.75" PointY="52.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.PSZWA" Width="1.5" PointX="25.75" PointY="52.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.PSZWB" Width="1.5" PointX="51.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.PurchaseAllocateA" Width="1.5" PointX="29.75" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.PurchaseAllocateB" Width="1.5" PointX="32" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.PurchaseAllocateC" Width="1.5" PointX="32" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.Query" Width="1.5" PointX="20.75" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.QueryStock" Width="1.5" PointX="50.75" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.QuestionTypeA" Width="1.5" PointX="51.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.QuestionTypeB" Width="1.5" PointX="51.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RBDCXset" Width="1.5" PointX="31.75" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RBonusNSAL" Width="1.5" PointX="51.75" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RBonusSALE" Width="1.5" PointX="51.75" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RCU" Width="1.5" PointX="40.75" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RDCGA" Width="1.5" PointX="24.75" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RDCGB" Width="1.5" PointX="27" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.Rinvoice" Width="1.5" PointX="51.75" PointY="47.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RIPA" Width="1.5" PointX="3" PointY="107.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RIPB" Width="1.5" PointX="5.25" PointY="102.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RIRA" Width="1.5" PointX="3" PointY="124.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RIRAShareFeeA" Width="1.5" PointX="24.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RIRAShareFeeB" Width="1.5" PointX="27" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RIRAShareFeeC" Width="1.5" PointX="27" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RIRB" Width="1.5" PointX="5.25" PointY="122.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RIRC" Width="1.5" PointX="5.25" PointY="119.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RISA" Width="1.5" PointX="3" PointY="149.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RISB" Width="1.5" PointX="5.25" PointY="141.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RISD" Width="1.5" PointX="12.75" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RISE" Width="1.5" PointX="15" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RPCP" Width="1.5" PointX="46.75" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RPCPwithHU00SS" Width="1.5" PointX="51.75" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RPD" Width="1.5" PointX="27.75" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RPICA" Width="1.5" PointX="36.75" PointY="36.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RPICB" Width="1.5" PointX="39" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RPICSampleA" Width="1.5" PointX="36.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RPICSampleB" Width="1.5" PointX="39" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.rptMonthCatalogStock" Width="1.5" PointX="52.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.rptRACNSStock" Width="1.5" PointX="52.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.rptRACNSStockDetail" Width="1.5" PointX="52.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RQCLA" Width="1.5" PointX="36.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RQCLB" Width="1.5" PointX="39" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RQSMA" Width="1.5" PointX="34.75" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RQSMB" Width="1.5" PointX="37" PointY="33.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RQSNA" Width="1.5" PointX="3.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RQSNB" Width="1.5" PointX="6" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RQSNC" Width="1.5" PointX="6" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSDA" Width="1.5" PointX="33.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSDB" Width="1.5" PointX="36" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSEA" Width="1.5" PointX="8.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSEB" Width="1.5" PointX="11" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSGA" Width="1.5" PointX="52.75" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSGB" Width="1.5" PointX="36.75" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSGC" Width="1.5" PointX="42.75" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIAA" Width="1.5" PointX="3" PointY="173.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIAB" Width="1.5" PointX="8.25" PointY="164.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSICA" Width="1.5" PointX="4.5" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSICB" Width="1.5" PointX="6.75" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSICC" Width="1.5" PointX="48.75" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIDA" Width="1.5" PointX="7.5" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIDB" Width="1.5" PointX="9.75" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIEA" Width="1.5" PointX="53.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIFA" Width="1.5" PointX="3" PointY="183.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIFB" Width="1.5" PointX="5.25" PointY="181.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIHA" Width="1.5" PointX="3" PointY="189.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIHB" Width="1.5" PointX="5.25" PointY="192.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIIA" Width="1.5" PointX="3" PointY="195.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIIB" Width="1.5" PointX="8.25" PointY="193.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIMA" Width="1.5" PointX="3" PointY="199.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIMB" Width="1.5" PointX="11.25" PointY="191" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIOA" Width="1.5" PointX="53.75" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIOB" Width="1.5" PointX="53.75" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIQA" Width="1.5" PointX="3" PointY="210.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIQB" Width="1.5" PointX="54.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIQBB" Width="1.5" PointX="5.25" PointY="214" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIRA" Width="1.5" PointX="3" PointY="221.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIRB" Width="1.5" PointX="8.25" PointY="221.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIRBB" Width="1.5" PointX="5.25" PointY="224.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSISA" Width="1.5" PointX="3" PointY="231.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSISAdjust" Width="1.5" PointX="53.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSISB" Width="1.5" PointX="22.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSISBB" Width="1.5" PointX="5.25" PointY="234.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIVA" Width="1.5" PointX="10.5" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIVB" Width="1.5" PointX="12.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIYA" Width="1.5" PointX="3" PointY="240.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIYB" Width="1.5" PointX="8.25" PointY="236.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIZA" Width="1.5" PointX="1.5" PointY="97" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSIZB" Width="1.5" PointX="3.75" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSNA" Width="1.5" PointX="33.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSNB" Width="1.5" PointX="36" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSNNA" Width="1.5" PointX="24.75" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSNNB" Width="1.5" PointX="27" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSNNC" Width="1.5" PointX="29.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSPA" Width="1.5" PointX="27" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSPB" Width="1.5" PointX="29.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSPPA" Width="1.5" PointX="3" PointY="250" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSPPB" Width="1.5" PointX="5.25" PointY="244.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSPPC" Width="1.5" PointX="7.5" PointY="246.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSQA" Width="1.5" PointX="24.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSQB" Width="1.5" PointX="29.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSRA" Width="1.5" PointX="3" PointY="271.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSRB" Width="1.5" PointX="5.25" PointY="264.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSRGA" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSRGB" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSRHA" Width="1.5" PointX="3.75" PointY="91.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSRHB" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSRMA" Width="1.5" PointX="1.5" PointY="101.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSRMB" Width="1.5" PointX="3.75" PointY="59.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSTN" Width="1.5" PointX="8.75" PointY="203.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSTP" Width="1.5" PointX="11" PointY="170.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSVA" Width="1.5" PointX="12.75" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSVAsumA" Width="1.5" PointX="19.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSVAsumB" Width="1.5" PointX="22" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSVAsumC" Width="1.5" PointX="22" PointY="35.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSVB" Width="1.5" PointX="15" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSVC" Width="1.5" PointX="17.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSWA" Width="1.5" PointX="17.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSWB" Width="1.5" PointX="20" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSWC" Width="1.5" PointX="22.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZA" Width="1.5" PointX="31.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZAA" Width="1.5" PointX="8.75" PointY="146.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZAB" Width="1.5" PointX="11" PointY="132.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZABB" Width="1.5" PointX="11" PointY="167.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZB" Width="1.5" PointX="38.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZBA" Width="1.5" PointX="8.75" PointY="218" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZBB" Width="1.5" PointX="11" PointY="220" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZBBB" Width="1.5" PointX="11" PointY="181.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZC" Width="1.5" PointX="54.75" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZD" Width="1.5" PointX="54.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZE" Width="1.5" PointX="50.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZXA" Width="1.5" PointX="3.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZXB" Width="1.5" PointX="6" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RSZXC" Width="1.5" PointX="6" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RTGA" Width="1.5" PointX="54.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RTSAA" Width="1.5" PointX="3" PointY="308" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RTSAB" Width="1.5" PointX="5.25" PointY="302.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RTSAcalA" Width="1.5" PointX="5.75" PointY="203.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RTSAcalB" Width="1.5" PointX="8" PointY="155.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RVSA" Width="1.5" PointX="31.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RVSB" Width="1.5" PointX="34" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RVT" Width="1.5" PointX="55.75" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SALARY" Width="1.5" PointX="55.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SalesReport6_Data" Width="1.5" PointX="55.75" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SBCU" Width="1.5" PointX="55.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SELLBARCODEA" Width="1.5" PointX="8.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SELLBARCODEB" Width="1.5" PointX="11" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SELLMFGNO" Width="1.5" PointX="55.75" PointY="43.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SerialNO" Width="1.5" PointX="55.75" PointY="46.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SetBSPOS" Width="1.5" PointX="3.75" PointY="98.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SetCollectionCN" Width="1.5" PointX="55.75" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ShiftHolidaySet" Width="1.5" PointX="56.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ShiftMemo" Width="1.5" PointX="56.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ShiftNotEnough" Width="1.5" PointX="56.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.ShiftTime" Width="1.5" PointX="56.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.Sinvoice" Width="1.5" PointX="14.75" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.StockCloseDate" Width="1.5" PointX="16.75" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.Store" Width="1.5" PointX="17.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.StoreBSLAB" Width="1.5" PointX="56.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.StoreCategory" Width="1.5" PointX="20" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.StoreDescription" Width="1.5" PointX="20" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SumStockErrorLog" Width="1.5" PointX="18.75" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.SumStockLog" Width="1.5" PointX="56.75" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.sysdiagram" Width="1.5" PointX="40.75" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TEMPBONUSSET" Width="1.5" PointX="42.75" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TempBPSNValid" Width="1.5" PointX="57.75" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TempRPSN" Width="1.5" PointX="57.75" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TEMPRSGA" Width="1.5" PointX="33.75" PointY="59.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TempRSTN" Width="1.5" PointX="57.75" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TEMPSALESBONU" Width="1.5" PointX="35.75" PointY="59.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TempStoreValid" Width="1.5" PointX="57.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TempWHO" Width="1.5" PointX="57.75" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TempWHOValid" Width="1.5" PointX="57.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TimeClock" Width="1.5" PointX="57.75" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.uAddress" Width="1.5" PointX="57.75" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.uAddressCity" Width="1.5" PointX="57.75" PointY="53.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.uDM" Width="1.5" PointX="57.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.uNEW" Width="1.5" PointX="58.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.User" Width="1.5" PointX="10.5" PointY="160.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.UserAuthority" Width="1.5" PointX="12.75" PointY="160.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.UserGroup" Width="1.5" PointX="12.75" PointY="157.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.UserLog" Width="1.5" PointX="58.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.UserObject" Width="1.5" PointX="8.25" PointY="134.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.UserStore" Width="1.5" PointX="10.5" PointY="139" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BONUSFL1" Width="1.5" PointX="58.75" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.BSTL_20131120BK" Width="1.5" PointX="48.75" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CodeGl1" Width="1.5" PointX="58.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.CodeSea" Width="1.5" PointX="58.75" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.NewSIZE" Width="1.5" PointX="50.75" PointY="60.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RADAT" Width="1.5" PointX="59.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.RPCP2" Width="1.5" PointX="59.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.salary0423" Width="1.5" PointX="26.75" PointY="61.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.tempWellan" Width="1.5" PointX="59.75" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TRSICA" Width="1.5" PointX="59.75" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TRSICB" Width="1.5" PointX="59.75" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FL00SSModel.TRSTN" Width="1.5" PointX="52.75" PointY="61.625" IsExpanded="true" />
+        <AssociationConnector Association="FL00SSModel.FK_AllowanceB_AllowanceA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BACSETB_BACSETA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BarCodeScaleB_BarCodeScaleA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BBNK_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BCUG_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BCUSSALES_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BDEP_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BINT_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BPSN_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSTP_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSTP_RSWA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RIPA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RIPA_BCUS1" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RIRA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RISA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIAA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIAA_BCUS1" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIFA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIHA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIIA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIMA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIMA_BCUS1" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIQA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIRA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSISA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIYA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSPPA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSTP_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSZABB_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSZBBB_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RTSAA_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_User_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_UserObject_BCUS" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BCUSSALES_BPSN" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BONUSSETBRAT_BONUSSETA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BONUSSETBWT_BONUSSETA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSTI_BPSN" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_UserObject_BPSN" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRGA_BRPA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRGB_BRPB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRHB_BRPB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRHA_BRPC" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BRPDB_BRPDA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRHB_BRPDA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSHB_BSHA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSPB_BSHB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSSB_BSSA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSTL_BSTN" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSTO_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_ProductClassInPOS_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIAB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSICB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIDB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIFB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIIB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIMB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIRB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIVB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIYB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIZB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRMB_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSTN_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_SetBSPOS_BSTL" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSTN_BSTXA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSTP_BSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BSTP_RSWA_BSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_MultiBSONU_BSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIFB_BSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIHB_BSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIRB_BSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RTSAcalB_BSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_BWEXB_BWEX" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_CLMoneyB_CLMoneyA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_CLOrderB_CLOrderA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_CLOrderC_CLOrderA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_CLOrderD_CLOrderA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_CLOutB_CLOutA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_CodeB_CodeA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_CodeD_CodeC" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_DailyWorkB_DailyWorkA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_DailyWorkC_DailyWorkB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_DailyWorkD_DailyWorkB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_EinvoiceTrackB_EinvoiceTrackA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_FunctionB_FunctionA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_MenuA_FunctionA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_GroupAuthority_GroupA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_UserGroup_GroupA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_GroupAuthority_MenuA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_MenuB_MenuA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_UserAuthority_MenuA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_PurchaseAllocateB_PurchaseAllocateA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_PurchaseAllocateC_PurchaseAllocateA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RDCGB_RDCGA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RIPB_RIPA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RIRB_RIRA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RIRC_RIRA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RIRAShareFeeB_RIRAShareFeeA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RIRAShareFeeC_RIRAShareFeeA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RISB_RISA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RISE_RISD" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RPICB_RPICA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RPICSampleB_RPICSampleA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RQCLB_RQCLA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RQSMB_RQSMA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RQSNB_RQSNA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RQSNC_RQSNA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSDB_RSDA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSEB_RSEA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIAB_RSIAA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSICB_RSICA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIDB_RSIDA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIFB_RSIFA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIHB_RSIHA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIIB_RSIIA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIMB_RSIMA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIQBB_RSIQA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIRB_RSIRA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIRBB_RSIRA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSISBB_RSISA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIVB_RSIVA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIYB_RSIYA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSIZB_RSIZA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSNB_RSNA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSNNB_RSNNA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSNNC_RSNNB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSPB_RSPA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSPPB_RSPPA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSPPC_RSPPB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRB_RSRA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRGB_RSRGA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRHB_RSRHA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSRMB_RSRMA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSTP_RSTN" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSVB_RSVA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSVAsumB_RSVAsumA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSVAsumC_RSVAsumA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSVC_RSVB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSWB_RSWA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSWC_RSWB" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSZAB_RSZAA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSZABB_RSZAA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSZBB_RSZBA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSZBBB_RSZBA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSZXB_RSZXA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RSZXC_RSZXA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RTSAB_RTSAA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RTSAcalB_RTSAcalA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_RVSB_RVSA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_SELLBARCODEB_SELLBARCODEA" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_StoreCategory_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_StoreDescription_Store" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_User_UserObject" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_UserAuthority_User" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_UserGroup_User" ManuallyRouted="false" />
+        <AssociationConnector Association="FL00SSModel.FK_UserStore_UserObject" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

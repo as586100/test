@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PickupDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NoticeA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Require" Type="nvarchar" MaxLength="50" />
+          <Property Name="Response" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="ERPMaping" Type="nvarchar" MaxLength="50" />
+          <Property Name="NoticeMaping" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkState" Type="nvarchar" MaxLength="10" />
+          <Property Name="OrderState" Type="nvarchar" MaxLength="10" />
+          <Property Name="shipOrder" Type="nvarchar" MaxLength="50" />
+          <Property Name="shipSN" Type="nvarchar" MaxLength="50" />
+          <Property Name="shipImg" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="NoticeB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Barcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Color" Type="nvarchar" MaxLength="50" />
+          <Property Name="Size" Type="nvarchar" MaxLength="50" />
+          <Property Name="Demand" Type="int" />
+          <Property Name="Shipment" Type="int" />
+          <Property Name="Location1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Maping" Type="bigint" />
+        </EntityType>
+        <EntityType Name="PickupA">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="OrderStore" Type="nvarchar" MaxLength="15" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderAmount" Type="bigint" />
+          <Property Name="OrderSate" Type="nvarchar" MaxLength="10" />
+          <Property Name="OrderUploade" Type="nvarchar" MaxLength="10" />
+          <Property Name="OrderDate" Type="date" />
+          <Property Name="OrderStaff" Type="nvarchar" MaxLength="5" />
+          <Property Name="OrderDifference" Type="bigint" />
+          <Property Name="OrderSpendTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderTrunState" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="PickupB">
+          <Key>
+            <PropertyRef Name="OrderSN" />
+          </Key>
+          <Property Name="OrderSN" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderID" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Order_Location" Type="nvarchar" MaxLength="100" />
+          <Property Name="Order_Type" Type="nvarchar" MaxLength="20" />
+          <Property Name="Order_Color" Type="nvarchar" MaxLength="150" />
+          <Property Name="Order_Size" Type="nvarchar" MaxLength="150" />
+          <Property Name="Order_Amount" Type="bigint" />
+          <Property Name="Order_PickAmount" Type="bigint" />
+          <Property Name="Order_Barcode" Type="nvarchar" MaxLength="12" />
+          <Property Name="Order_BoxNum" Type="bigint" />
+          <Property Name="Order_BoxState" Type="nvarchar" MaxLength="15" />
+          <Property Name="Order_Store" Type="nvarchar" MaxLength="15" />
+          <Property Name="Order_State" Type="nvarchar" MaxLength="15" />
+          <Property Name="Order_Location2" Type="nvarchar" MaxLength="100" />
+          <Property Name="Order_Stock" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ReadyOrderA">
+          <Key>
+            <PropertyRef Name="RA_ID" />
+          </Key>
+          <Property Name="RA_ID" Type="bigint" Nullable="false" />
+          <Property Name="RA_Maping_PU_ID" Type="nvarchar" MaxLength="15" />
+          <Property Name="RA_BoxID" Type="bigint" />
+          <Property Name="RA_Maping_ERP_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="RA_Date" Type="date" />
+          <Property Name="RA_State" Type="nvarchar" MaxLength="1" />
+          <Property Name="RA_Store" Type="nvarchar" MaxLength="15" />
+          <Property Name="RA_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="RA_Staff" Type="nvarchar" MaxLength="5" />
+          <Property Name="RA_Amount" Type="bigint" />
+          <Property Name="RA_Img" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ReadyOrderB">
+          <Key>
+            <PropertyRef Name="RB_ID" />
+          </Key>
+          <Property Name="RB_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RB_Maping_RA_ID" Type="bigint" />
+          <Property Name="RB_OrderSN" Type="nvarchar" MaxLength="15" />
+          <Property Name="RB_Barcode" Type="nvarchar" MaxLength="12" />
+          <Property Name="RB_Type" Type="nvarchar" MaxLength="20" />
+          <Property Name="RB_Color" Type="nvarchar" MaxLength="15" />
+          <Property Name="RB_Size" Type="nvarchar" MaxLength="15" />
+          <Property Name="RB_Amount" Type="bigint" />
+        </EntityType>
+        <Association Name="FK_NoticeB_NoticeA">
+          <End Role="NoticeA" Type="Self.NoticeA" Multiplicity="0..1" />
+          <End Role="NoticeB" Type="Self.NoticeB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoticeA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NoticeB">
+              <PropertyRef Name="Maping" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PickupB_PickupA">
+          <End Role="PickupA" Type="Self.PickupA" Multiplicity="1" />
+          <End Role="PickupB" Type="Self.PickupB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PickupA">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="PickupB">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReadyOrderA_PickupA">
+          <End Role="PickupA" Type="Self.PickupA" Multiplicity="0..1" />
+          <End Role="ReadyOrderA" Type="Self.ReadyOrderA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PickupA">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="ReadyOrderA">
+              <PropertyRef Name="RA_Maping_PU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReadyOrderB_ReadyOrderA">
+          <End Role="ReadyOrderA" Type="Self.ReadyOrderA" Multiplicity="0..1" />
+          <End Role="ReadyOrderB" Type="Self.ReadyOrderB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReadyOrderA">
+              <PropertyRef Name="RA_ID" />
+            </Principal>
+            <Dependent Role="ReadyOrderB">
+              <PropertyRef Name="RB_Maping_RA_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PickupDBModelStoreContainer">
+          <EntitySet Name="NoticeA" EntityType="Self.NoticeA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NoticeB" EntityType="Self.NoticeB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PickupA" EntityType="Self.PickupA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PickupB" EntityType="Self.PickupB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReadyOrderA" EntityType="Self.ReadyOrderA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReadyOrderB" EntityType="Self.ReadyOrderB" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_NoticeB_NoticeA" Association="Self.FK_NoticeB_NoticeA">
+            <End Role="NoticeA" EntitySet="NoticeA" />
+            <End Role="NoticeB" EntitySet="NoticeB" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PickupB_PickupA" Association="Self.FK_PickupB_PickupA">
+            <End Role="PickupA" EntitySet="PickupA" />
+            <End Role="PickupB" EntitySet="PickupB" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReadyOrderA_PickupA" Association="Self.FK_ReadyOrderA_PickupA">
+            <End Role="PickupA" EntitySet="PickupA" />
+            <End Role="ReadyOrderA" EntitySet="ReadyOrderA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReadyOrderB_ReadyOrderA" Association="Self.FK_ReadyOrderB_ReadyOrderA">
+            <End Role="ReadyOrderA" EntitySet="ReadyOrderA" />
+            <End Role="ReadyOrderB" EntitySet="ReadyOrderB" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PickupDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PickupA">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OrderStore" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="OrderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderAmount" Type="Int64" />
+          <Property Name="OrderSate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="OrderUploade" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="OrderDate" Type="DateTime" Precision="0" />
+          <Property Name="OrderStaff" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PickupBs" Relationship="Self.FK_PickupB_PickupA" FromRole="PickupA" ToRole="PickupB" />
+          <NavigationProperty Name="ReadyOrderAs" Relationship="Self.FK_ReadyOrderA_PickupA" FromRole="PickupA" ToRole="ReadyOrderA" />
+          <Property Name="OrderDifference" Type="Int64" />
+          <Property Name="OrderSpendTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderTrunState" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PickupB">
+          <Key>
+            <PropertyRef Name="OrderSN" />
+          </Key>
+          <Property Name="OrderSN" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Order_Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Color" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Size" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Amount" Type="Int64" />
+          <Property Name="Order_PickAmount" Type="Int64" />
+          <Property Name="Order_Barcode" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Order_BoxNum" Type="Int64" />
+          <Property Name="Order_BoxState" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Store" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Order_State" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Location2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PickupA" Relationship="Self.FK_PickupB_PickupA" FromRole="PickupB" ToRole="PickupA" />
+          <Property Name="Order_Stock" Type="Int64" />
+        </EntityType>
+        <EntityType Name="ReadyOrderA">
+          <Key>
+            <PropertyRef Name="RA_ID" />
+          </Key>
+          <Property Name="RA_ID" Type="Int64" Nullable="false" />
+          <Property Name="RA_Maping_PU_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="RA_BoxID" Type="Int64" />
+          <Property Name="RA_Maping_ERP_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RA_Date" Type="DateTime" Precision="0" />
+          <Property Name="RA_State" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="RA_Store" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="RA_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RA_Staff" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="RA_Amount" Type="Int64" />
+          <NavigationProperty Name="PickupA" Relationship="Self.FK_ReadyOrderA_PickupA" FromRole="ReadyOrderA" ToRole="PickupA" />
+          <NavigationProperty Name="ReadyOrderBs" Relationship="Self.FK_ReadyOrderB_ReadyOrderA" FromRole="ReadyOrderA" ToRole="ReadyOrderB" />
+          <Property Name="RA_Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ReadyOrderB">
+          <Key>
+            <PropertyRef Name="RB_ID" />
+          </Key>
+          <Property Name="RB_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RB_Maping_RA_ID" Type="Int64" />
+          <Property Name="RB_OrderSN" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="RB_Barcode" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="RB_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RB_Color" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="RB_Size" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="RB_Amount" Type="Int64" />
+          <NavigationProperty Name="ReadyOrderA" Relationship="Self.FK_ReadyOrderB_ReadyOrderA" FromRole="ReadyOrderB" ToRole="ReadyOrderA" />
+        </EntityType>
+        <Association Name="FK_PickupB_PickupA">
+          <End Role="PickupA" Type="Self.PickupA" Multiplicity="1" />
+          <End Role="PickupB" Type="Self.PickupB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PickupA">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="PickupB">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReadyOrderA_PickupA">
+          <End Role="PickupA" Type="Self.PickupA" Multiplicity="0..1" />
+          <End Role="ReadyOrderA" Type="Self.ReadyOrderA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PickupA">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="ReadyOrderA">
+              <PropertyRef Name="RA_Maping_PU_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReadyOrderB_ReadyOrderA">
+          <End Role="ReadyOrderA" Type="Self.ReadyOrderA" Multiplicity="0..1" />
+          <End Role="ReadyOrderB" Type="Self.ReadyOrderB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReadyOrderA">
+              <PropertyRef Name="RA_ID" />
+            </Principal>
+            <Dependent Role="ReadyOrderB">
+              <PropertyRef Name="RB_Maping_RA_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PickupDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PickupAs" EntityType="Self.PickupA" />
+          <EntitySet Name="PickupBs" EntityType="Self.PickupB" />
+          <EntitySet Name="ReadyOrderAs" EntityType="Self.ReadyOrderA" />
+          <EntitySet Name="ReadyOrderBs" EntityType="Self.ReadyOrderB" />
+          <AssociationSet Name="FK_PickupB_PickupA" Association="Self.FK_PickupB_PickupA">
+            <End Role="PickupA" EntitySet="PickupAs" />
+            <End Role="PickupB" EntitySet="PickupBs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReadyOrderA_PickupA" Association="Self.FK_ReadyOrderA_PickupA">
+            <End Role="PickupA" EntitySet="PickupAs" />
+            <End Role="ReadyOrderA" EntitySet="ReadyOrderAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReadyOrderB_ReadyOrderA" Association="Self.FK_ReadyOrderB_ReadyOrderA">
+            <End Role="ReadyOrderA" EntitySet="ReadyOrderAs" />
+            <End Role="ReadyOrderB" EntitySet="ReadyOrderBs" />
+          </AssociationSet>
+          <EntitySet Name="NoticeAs" EntityType="PickupDBModel.NoticeA" />
+          <EntitySet Name="NoticeBs" EntityType="PickupDBModel.NoticeB" />
+          <AssociationSet Name="FK_NoticeB_NoticeA" Association="PickupDBModel.FK_NoticeB_NoticeA">
+            <End Role="NoticeA" EntitySet="NoticeAs" />
+            <End Role="NoticeB" EntitySet="NoticeBs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="NoticeA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Require" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Response" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ERPMaping" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NoticeMaping" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkState" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="OrderState" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NoticeBs" Relationship="PickupDBModel.FK_NoticeB_NoticeA" FromRole="NoticeA" ToRole="NoticeB" />
+          <Property Name="shipOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="shipImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="shipSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NoticeB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="Barcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Demand" Type="Int32" />
+          <Property Name="Shipment" Type="Int32" />
+          <Property Name="Location1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Location2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Maping" Type="Int64" />
+          <NavigationProperty Name="NoticeA" Relationship="PickupDBModel.FK_NoticeB_NoticeA" FromRole="NoticeB" ToRole="NoticeA" />
+        </EntityType>
+        <Association Name="FK_NoticeB_NoticeA">
+          <End Type="PickupDBModel.NoticeA" Role="NoticeA" Multiplicity="0..1" />
+          <End Type="PickupDBModel.NoticeB" Role="NoticeB" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoticeA">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NoticeB">
+              <PropertyRef Name="Maping" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PickupDBModelStoreContainer" CdmEntityContainer="PickupDBEntities1">
+          <EntitySetMapping Name="PickupAs">
+            <EntityTypeMapping TypeName="PickupDBModel.PickupA">
+              <MappingFragment StoreEntitySet="PickupA">
+                <ScalarProperty Name="OrderTrunState" ColumnName="OrderTrunState" />
+                <ScalarProperty Name="OrderSpendTime" ColumnName="OrderSpendTime" />
+                <ScalarProperty Name="OrderDifference" ColumnName="OrderDifference" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="OrderStore" ColumnName="OrderStore" />
+                <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+                <ScalarProperty Name="OrderAmount" ColumnName="OrderAmount" />
+                <ScalarProperty Name="OrderSate" ColumnName="OrderSate" />
+                <ScalarProperty Name="OrderUploade" ColumnName="OrderUploade" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="OrderStaff" ColumnName="OrderStaff" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PickupBs">
+            <EntityTypeMapping TypeName="PickupDBModel.PickupB">
+              <MappingFragment StoreEntitySet="PickupB">
+                <ScalarProperty Name="Order_Stock" ColumnName="Order_Stock" />
+                <ScalarProperty Name="OrderSN" ColumnName="OrderSN" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="Order_Location" ColumnName="Order_Location" />
+                <ScalarProperty Name="Order_Type" ColumnName="Order_Type" />
+                <ScalarProperty Name="Order_Color" ColumnName="Order_Color" />
+                <ScalarProperty Name="Order_Size" ColumnName="Order_Size" />
+                <ScalarProperty Name="Order_Amount" ColumnName="Order_Amount" />
+                <ScalarProperty Name="Order_PickAmount" ColumnName="Order_PickAmount" />
+                <ScalarProperty Name="Order_Barcode" ColumnName="Order_Barcode" />
+                <ScalarProperty Name="Order_BoxNum" ColumnName="Order_BoxNum" />
+                <ScalarProperty Name="Order_BoxState" ColumnName="Order_BoxState" />
+                <ScalarProperty Name="Order_Store" ColumnName="Order_Store" />
+                <ScalarProperty Name="Order_State" ColumnName="Order_State" />
+                <ScalarProperty Name="Order_Location2" ColumnName="Order_Location2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReadyOrderAs">
+            <EntityTypeMapping TypeName="PickupDBModel.ReadyOrderA">
+              <MappingFragment StoreEntitySet="ReadyOrderA">
+                <ScalarProperty Name="RA_Img" ColumnName="RA_Img" />
+                <ScalarProperty Name="RA_ID" ColumnName="RA_ID" />
+                <ScalarProperty Name="RA_Maping_PU_ID" ColumnName="RA_Maping_PU_ID" />
+                <ScalarProperty Name="RA_BoxID" ColumnName="RA_BoxID" />
+                <ScalarProperty Name="RA_Maping_ERP_ID" ColumnName="RA_Maping_ERP_ID" />
+                <ScalarProperty Name="RA_Date" ColumnName="RA_Date" />
+                <ScalarProperty Name="RA_State" ColumnName="RA_State" />
+                <ScalarProperty Name="RA_Store" ColumnName="RA_Store" />
+                <ScalarProperty Name="RA_Name" ColumnName="RA_Name" />
+                <ScalarProperty Name="RA_Staff" ColumnName="RA_Staff" />
+                <ScalarProperty Name="RA_Amount" ColumnName="RA_Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReadyOrderBs">
+            <EntityTypeMapping TypeName="PickupDBModel.ReadyOrderB">
+              <MappingFragment StoreEntitySet="ReadyOrderB">
+                <ScalarProperty Name="RB_ID" ColumnName="RB_ID" />
+                <ScalarProperty Name="RB_Maping_RA_ID" ColumnName="RB_Maping_RA_ID" />
+                <ScalarProperty Name="RB_OrderSN" ColumnName="RB_OrderSN" />
+                <ScalarProperty Name="RB_Barcode" ColumnName="RB_Barcode" />
+                <ScalarProperty Name="RB_Type" ColumnName="RB_Type" />
+                <ScalarProperty Name="RB_Color" ColumnName="RB_Color" />
+                <ScalarProperty Name="RB_Size" ColumnName="RB_Size" />
+                <ScalarProperty Name="RB_Amount" ColumnName="RB_Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NoticeAs">
+            <EntityTypeMapping TypeName="PickupDBModel.NoticeA">
+              <MappingFragment StoreEntitySet="NoticeA">
+                <ScalarProperty Name="shipSN" ColumnName="shipSN" />
+                <ScalarProperty Name="shipImg" ColumnName="shipImg" />
+                <ScalarProperty Name="shipOrder" ColumnName="shipOrder" />
+                <ScalarProperty Name="OrderState" ColumnName="OrderState" />
+                <ScalarProperty Name="WorkState" ColumnName="WorkState" />
+                <ScalarProperty Name="NoticeMaping" ColumnName="NoticeMaping" />
+                <ScalarProperty Name="ERPMaping" ColumnName="ERPMaping" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Response" ColumnName="Response" />
+                <ScalarProperty Name="Require" ColumnName="Require" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NoticeBs">
+            <EntityTypeMapping TypeName="PickupDBModel.NoticeB">
+              <MappingFragment StoreEntitySet="NoticeB">
+                <ScalarProperty Name="Maping" ColumnName="Maping" />
+                <ScalarProperty Name="Location2" ColumnName="Location2" />
+                <ScalarProperty Name="Location1" ColumnName="Location1" />
+                <ScalarProperty Name="Shipment" ColumnName="Shipment" />
+                <ScalarProperty Name="Demand" ColumnName="Demand" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,1008 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SalesInput</name>
+    </assembly>
+    <members>
+        <member name="T:SalesInput.DataSet1">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:SalesInput.DataSet2">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.openport(System.String)">
+            <summary>
+            開啟條碼機
+            </summary>
+            <param name="PrinterName">條碼機名型號</param>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.closeport">
+            <summary>
+            關閉條碼機
+            </summary>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.sendcommand(System.String)">
+            <summary>
+            送內建指令到條碼印表機
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.setup(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            條碼機設定
+            </summary>
+            <param name="LabelWidth">標籤寬度，單位mm</param>
+            <param name="LabelHeight">標籤高度，單位mm</param>
+            <param name="Speed">速度：1.0->每秒1.0吋, 1.5->每秒1.5吋, 2.0->每秒2.0吋, 3.0->每秒3.0吋, 4.0->每秒4.0吋, 5.0->每秒5.0吋, 6.0->每秒6.0吋</param>
+            <param name="Density">濃度：0~15，數字愈大列印結果愈黑</param>
+            <param name="Sensor">設定使用感應器類別：0->表示使用垂直間距感測器(gap sensor), 1->表示使用黑標感測器(black mark sensor)</param>
+            <param name="Vertical">設定gap/black mark 垂直間距高度，單位mm</param>
+            <param name="Offset">設定gap/black mark 偏移距離，單位mm，此參數若使用一般標籤時均設為0</param>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.downloadpcx(System.String,System.String)">
+            <summary>
+            下載單色PCX格式圖檔至印表機
+            </summary>
+            <param name="Filename">檔案(可包含路徑)</param>
+            <param name="ImageName">圖名(請使用大寫檔名)</param>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.barcode(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            列印條碼
+            </summary>
+            <param name="X">x座標：文字X方向起始點，以點(point)表示。(200DPI，1點=1/8mm，300DPI，1點=1/12mm)</param>
+            <param name="Y">y座標：文字Y方向起始點，以點(point)表示。(200DPI，1點=1/8mm，300DPI，1點=1/12mm)</param>
+            <param name="CodeType">條碼別：128, 128M, EAN128, 25, 25C, 39, 39C, 93, EAN13, EAN13+2, EAN13+5, EAN8, EAN8+2, EAN8+5, CODA, POST, UPCA, UPCA+2, UPCA+5, UPCE, UPCE+2, UPCE+5</param>
+            <param name="Height">條碼高度，高度以點(point)表示</param>
+            <param name="Readable">是否列印條碼碼文：0->不列印碼文, 1->列印碼文</param>
+            <param name="rotation">旋轉角度，逆時鐘方向旋轉。如：0->0 degree, 90->90 degree, 180->180 degree, 270->270 degree</param>
+            <param name="Narrow">比例</param>
+            <param name="Wide">寬度</param>
+            <param name="Code">條碼內容</param>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.printerfont(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            使用條碼機內建文字列印
+            </summary>
+            <param name="X">x座標：文字X方向起始點，以點(point)表示。(200DPI，1點=1/8mm，300DPI，1點=1/12mm)</param>
+            <param name="Y">y座標：文字Y方向起始點，以點(point)表示。(200DPI，1點=1/8mm，300DPI，1點=1/12mm)</param>
+            <param name="FontName">內建字型名稱，共12種：1->8*12 dots, 2->12*20 dots, 3->16*24 dots, 4->24*32 dots, 5->32*48 dots, TST24.BF2->繁體中文24*24, TST16.BF2->繁體中文16*16, TTT24.BF2->繁體中文24*24(電信碼), TSS24.BF2->簡體中24*24, TSS16.BF2->簡體中文16*16, K->韓文24*24, L->韓文16*16</param>
+            <param name="rotation">旋轉角度，逆時鐘方向旋轉。如：0->0 degree, 90->90 degree, 180->180 degree, 270->270 degree</param>
+            <param name="Xmul">設定文字X方向放大倍率，1~8</param>
+            <param name="Ymul">設定文字Y方向放大倍率，1~8</param>
+            <param name="Content">列印文字內容</param>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.clearbuffer">
+            <summary>
+            清除緩衝區
+            </summary>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.printlabel(System.String,System.String)">
+            <summary>
+            開始列印條碼
+            </summary>
+            <param name="NumberOfSet">列印數量</param>
+            <param name="NumberOfCopy">複製數量</param>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.formfeed">
+            <summary>
+            跳頁，該函式需在setup後使用
+            </summary>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.nobackfeed">
+            <summary>
+            設定紙張不回吐
+            </summary>
+        </member>
+        <member name="M:SalesInput.Librarys.BarCodeCtrl.windowsfont(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            設定條碼文字
+            </summary>
+            <param name="X">x座標：文字X方向起始點，以點(point)表示。(200DPI，1點=1/8mm，300DPI，1點=1/12mm)</param>
+            <param name="Y">y座標：文字Y方向起始點，以點(point)表示。(200DPI，1點=1/8mm，300DPI，1點=1/12mm)</param>
+            <param name="fontheight">字體高度，以點(point)表示。(200DPI，1點=1/8mm，300DPI，1點=1/12mm)</param>
+            <param name="rotation">旋轉角度，逆時鐘方向旋轉。如：0->0 degree, 90->90 degree, 180->180 degree, 270->270 degree</param>
+            <param name="fontstyle">字體外型。如： 0->標準(Normal), 1->斜體(Italic), 2->粗體(Bold), 3->粗斜體(Bold and Italic)</param>
+            <param name="fontunderline">底線。如：0->無底線, 1->有底線</param>
+            <param name="FaceName">字體名稱。如：Arial, Times new Roman, 細明體, 標楷體</param>
+            <param name="TextContent">列印文字內容</param>
+        </member>
+        <member name="T:SalesInput.Librarys.PrintLibrary">
+            <summary>
+            列印相關
+            </summary>
+        </member>
+        <member name="M:SalesInput.Librarys.PrintLibrary.PrintLabel(System.String,System.Collections.Generic.List{SalesInput.View.Customer_Form.NoticeDetail})">
+            <summary>
+            列印標籤
+            </summary>
+            <param name="PrinterPath"></param>
+            <param name="noticeDetails"></param>
+        </member>
+        <member name="M:SalesInput.Librarys.PrintLibrary.PrintHCTLabel(System.Int32)">
+            <summary>
+            列印HCT標籤
+            </summary>
+            <param name="OrderID"></param>
+        </member>
+        <member name="M:SalesInput.Librarys.PrintLibrary.GetDetailFullPath(System.String,SalesInput.Librarys.PrintLibrary.ImgFormat)">
+            <summary>
+            取得完整路徑(包含圖片名稱)
+            </summary>
+            <param name="No">The no.</param>
+            <param name="p_ImgFormat">The p_ img format.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SalesInput.Librarys.PrintLibrary.GetFileName(System.String,SalesInput.Librarys.PrintLibrary.ImgFormat)">
+            <summary>
+            取得圖片名稱
+            </summary>
+            <param name="No">The p_ packet no.</param>
+            <param name="p_ImgFormat">The p_ img format.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SalesInput.Librarys.PrintLibrary.ImgFormat">
+            <summary>
+            圖片格式
+            </summary>
+        </member>
+        <member name="T:SalesInput.PickupDBDataSet">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:SalesInput.PickupDBDataSet.NoticeADataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:SalesInput.PickupDBDataSet.NoticeARow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:SalesInput.PickupDBDataSet.NoticeARowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:SalesInput.PickupDBDataSetTableAdapters.NoticeATableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:SalesInput.PickupDBDataSetTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:SalesInput.PickupDBDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SalesInput.PickupDBDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:SalesInput.PickupDBDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SalesInput.PickupDBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:SalesInput.PickupDBDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SalesInput.PickupDBDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:SalesInput.PickupDBDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:SalesInput.PickupDBDataSetTableAdapters.TableAdapterManager.UpdateAll(SalesInput.PickupDBDataSet)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:SalesInput.PickupDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:SalesInput.PickupDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:SalesInput.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強類型資源類別。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強類型資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources._1">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources._1456991079743">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources._1494850019_tag">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources._2_06_06_1">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources._new">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.c5873b46a5">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.checklist">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.compare">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.convert_icon">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.crbst_check">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.customers">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.Dash">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.DELETE">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.detail">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.door_to_door_service_250x250">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.erp">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.error">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.f">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.fax">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.File_Download_512">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.icon_000010_256">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.icon3">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.icon31">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.KEYBORD">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.Location">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.LocationSearch">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.ok">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.pictogram_din_e010_exit">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.pictogram_din_e010_exit1">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.Print">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.remove_icon_png_32">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.shejiyeiconiehix2befhe">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.shejiyeiconxfstnexfphz">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.全選">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="P:SalesInput.Properties.Resources.公佈欄">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Customer_Form.A0_noticeMenu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A0_noticeMenu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A0_noticeMenu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_CustomerShips_Form.#ctor">
+            <summary>
+            初始化設定
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_CustomerShips_Form.button_Search_Click(System.Object,System.EventArgs)">
+            <summary>
+            查詢單據
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_CustomerShips_Form.button_Download_Click(System.Object,System.EventArgs)">
+            <summary>
+            下載
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_CustomerShips_Form.button_Print_Click(System.Object,System.EventArgs)">
+            <summary>
+            列印揀貨總表(原為下載Excel)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SalesInput.View.Customer_Form.A1_CustomerShips_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_CustomerShips_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_CustomerShips_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:SalesInput.View.Customer_Form.NoticeDetail">
+            <summary>
+            單據明細
+            </summary>
+        </member>
+        <member name="P:SalesInput.View.Customer_Form.NoticeDetail.Location_1">
+            <summary>
+            儲位
+            </summary>
+        </member>
+        <member name="P:SalesInput.View.Customer_Form.NoticeDetail.TypeName">
+            <summary>
+            型號
+            </summary>
+        </member>
+        <member name="P:SalesInput.View.Customer_Form.NoticeDetail.Color">
+            <summary>
+            顏色
+            </summary>
+        </member>
+        <member name="P:SalesInput.View.Customer_Form.NoticeDetail.Size">
+            <summary>
+            尺寸
+            </summary>
+        </member>
+        <member name="P:SalesInput.View.Customer_Form.NoticeDetail.Amount">
+            <summary>
+            數量
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_NoticeTrun.buttonTrun_Click(System.Object,System.EventArgs)">
+            <summary>
+            轉調撥單
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SalesInput.View.Customer_Form.A1_NoticeTrun.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_NoticeTrun.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_NoticeTrun.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Customer_Form.A1_ShipsMenu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_ShipsMenu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A1_ShipsMenu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Customer_Form.A2_ItemList.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A2_ItemList.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A2_ItemList.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Customer_Form.A2_NoticePickup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A2_NoticePickup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Customer_Form.A2_NoticePickup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.DataConvert_Form.A1_DataConvert_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.DataConvert_Form.A1_DataConvert_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.DataConvert_Form.A1_DataConvert_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Location_Form.A1_Location_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Location_Form.A1_Location_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Location_Form.A1_Location_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Location_Form.A1_Location_Search.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Location_Form.A1_Location_Search.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Location_Form.A1_Location_Search.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.MessageBox_Form.Even_MessageBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.MessageBox_Form.Even_MessageBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.MessageBox_Form.Even_MessageBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A0_LoginForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A0_LoginForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A0_LoginForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A1_Transform.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A1_Transform.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A1_Transform.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A2_Detail_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Detail_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Detail_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A2_DifferenceForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_DifferenceForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_DifferenceForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Download_Form.button_Search_Click(System.Object,System.EventArgs)">
+            <summary>
+            查詢
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Download_Form.buttonDownLoad_Click(System.Object,System.EventArgs)">
+            <summary>
+            下載
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A2_Download_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Download_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Download_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A2_Pickup_Download_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Pickup_Download_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Pickup_Download_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A2_Pickup_Start_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Pickup_Start_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A2_Pickup_Start_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A3_Box_Confirm_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A3_Box_Confirm_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A3_Box_Confirm_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A4_TransformRSICA.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A4_TransformRSICA.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A4_TransformRSICA.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.A5_OpenBoxList.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A5_OpenBoxList.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.A5_OpenBoxList.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Pickup_Form.Keyboard.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.Keyboard.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Pickup_Form.Keyboard.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.Transform_Form.A1_Transform_Menu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.Transform_Form.A1_Transform_Menu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.Transform_Form.A1_Transform_Menu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.View.UpdateMessage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.View.UpdateMessage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.View.UpdateMessage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.A0_SettingLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.A0_SettingLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.A0_SettingLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.A1_Barcode_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.A1_Barcode_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.A1_Barcode_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.A1_Pickup_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.A1_Pickup_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.A1_Pickup_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:SalesInput.Index_Form.button1_Click(System.Object,System.EventArgs)">
+            <path>
+            SalesInput/Index_Form/button1_Click
+            </path>
+            <summary>
+            開啟連續套表Form
+            </summary>
+            <token>
+            button1_Click
+            </token>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>
+            開啟 A1_Print_Form 視窗 
+            </remarks>
+            <return>
+            開啟 A1_Print_Form 視窗 
+            </return>
+        </member>
+        <member name="F:SalesInput.Index_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SalesInput.Index_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SalesInput.Index_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SalesInput.A1_Print_Form.components">
+            <summary>
+            設計工具所需的變數。
+            </summary>
+        </member>
+        <member name="M:SalesInput.A1_Print_Form.Dispose(System.Boolean)">
+            <summary>
+            清除任何使用中的資源。
+            </summary>
+            <param name="disposing">如果應該處置 Managed 資源則為 true，否則為 false。</param>
+        </member>
+        <member name="M:SalesInput.A1_Print_Form.InitializeComponent">
+            <summary>
+            此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改
+            這個方法的內容。
+            </summary>
+        </member>
+        <member name="M:SalesInput.Program.Main">
+            <summary>
+            應用程式的主要進入點。
+            </summary>
+        </member>
+        <member name="T:WindowsFormsApplication1.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強類型資源類別。
+            </summary>
+        </member>
+        <member name="P:WindowsFormsApplication1.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:WindowsFormsApplication1.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強類型資源類別的資源查閱。
+            </summary>
+        </member>
+        <member name="P:WindowsFormsApplication1.Properties.Resources.Print">
+            <summary>
+              查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+            </summary>
+        </member>
+    </members>
+</doc>

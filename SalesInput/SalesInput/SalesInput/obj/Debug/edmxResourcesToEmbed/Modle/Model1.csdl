@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PickupDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PickupA">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderStore" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="OrderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderAmount" Type="Int64" />
+    <Property Name="OrderSate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OrderUploade" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="OrderStaff" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PickupBs" Relationship="Self.FK_PickupB_PickupA" FromRole="PickupA" ToRole="PickupB" />
+    <NavigationProperty Name="ReadyOrderAs" Relationship="Self.FK_ReadyOrderA_PickupA" FromRole="PickupA" ToRole="ReadyOrderA" />
+    <Property Name="OrderDifference" Type="Int64" />
+    <Property Name="OrderSpendTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderTrunState" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PickupB">
+    <Key>
+      <PropertyRef Name="OrderSN" />
+    </Key>
+    <Property Name="OrderSN" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order_Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Color" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Size" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Amount" Type="Int64" />
+    <Property Name="Order_PickAmount" Type="Int64" />
+    <Property Name="Order_Barcode" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Order_BoxNum" Type="Int64" />
+    <Property Name="Order_BoxState" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Store" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_State" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Location2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PickupA" Relationship="Self.FK_PickupB_PickupA" FromRole="PickupB" ToRole="PickupA" />
+    <Property Name="Order_Stock" Type="Int64" />
+  </EntityType>
+  <EntityType Name="ReadyOrderA">
+    <Key>
+      <PropertyRef Name="RA_ID" />
+    </Key>
+    <Property Name="RA_ID" Type="Int64" Nullable="false" />
+    <Property Name="RA_Maping_PU_ID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="RA_BoxID" Type="Int64" />
+    <Property Name="RA_Maping_ERP_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RA_Date" Type="DateTime" Precision="0" />
+    <Property Name="RA_State" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="RA_Store" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="RA_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RA_Staff" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="RA_Amount" Type="Int64" />
+    <NavigationProperty Name="PickupA" Relationship="Self.FK_ReadyOrderA_PickupA" FromRole="ReadyOrderA" ToRole="PickupA" />
+    <NavigationProperty Name="ReadyOrderBs" Relationship="Self.FK_ReadyOrderB_ReadyOrderA" FromRole="ReadyOrderA" ToRole="ReadyOrderB" />
+    <Property Name="RA_Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ReadyOrderB">
+    <Key>
+      <PropertyRef Name="RB_ID" />
+    </Key>
+    <Property Name="RB_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RB_Maping_RA_ID" Type="Int64" />
+    <Property Name="RB_OrderSN" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="RB_Barcode" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="RB_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RB_Color" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="RB_Size" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="RB_Amount" Type="Int64" />
+    <NavigationProperty Name="ReadyOrderA" Relationship="Self.FK_ReadyOrderB_ReadyOrderA" FromRole="ReadyOrderB" ToRole="ReadyOrderA" />
+  </EntityType>
+  <Association Name="FK_PickupB_PickupA">
+    <End Role="PickupA" Type="Self.PickupA" Multiplicity="1" />
+    <End Role="PickupB" Type="Self.PickupB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PickupA">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="PickupB">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadyOrderA_PickupA">
+    <End Role="PickupA" Type="Self.PickupA" Multiplicity="0..1" />
+    <End Role="ReadyOrderA" Type="Self.ReadyOrderA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PickupA">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="ReadyOrderA">
+        <PropertyRef Name="RA_Maping_PU_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReadyOrderB_ReadyOrderA">
+    <End Role="ReadyOrderA" Type="Self.ReadyOrderA" Multiplicity="0..1" />
+    <End Role="ReadyOrderB" Type="Self.ReadyOrderB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReadyOrderA">
+        <PropertyRef Name="RA_ID" />
+      </Principal>
+      <Dependent Role="ReadyOrderB">
+        <PropertyRef Name="RB_Maping_RA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PickupDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PickupAs" EntityType="Self.PickupA" />
+    <EntitySet Name="PickupBs" EntityType="Self.PickupB" />
+    <EntitySet Name="ReadyOrderAs" EntityType="Self.ReadyOrderA" />
+    <EntitySet Name="ReadyOrderBs" EntityType="Self.ReadyOrderB" />
+    <AssociationSet Name="FK_PickupB_PickupA" Association="Self.FK_PickupB_PickupA">
+      <End Role="PickupA" EntitySet="PickupAs" />
+      <End Role="PickupB" EntitySet="PickupBs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadyOrderA_PickupA" Association="Self.FK_ReadyOrderA_PickupA">
+      <End Role="PickupA" EntitySet="PickupAs" />
+      <End Role="ReadyOrderA" EntitySet="ReadyOrderAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReadyOrderB_ReadyOrderA" Association="Self.FK_ReadyOrderB_ReadyOrderA">
+      <End Role="ReadyOrderA" EntitySet="ReadyOrderAs" />
+      <End Role="ReadyOrderB" EntitySet="ReadyOrderBs" />
+    </AssociationSet>
+    <EntitySet Name="NoticeAs" EntityType="PickupDBModel.NoticeA" />
+    <EntitySet Name="NoticeBs" EntityType="PickupDBModel.NoticeB" />
+    <AssociationSet Name="FK_NoticeB_NoticeA" Association="PickupDBModel.FK_NoticeB_NoticeA">
+      <End Role="NoticeA" EntitySet="NoticeAs" />
+      <End Role="NoticeB" EntitySet="NoticeBs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="NoticeA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Require" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Response" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ERPMaping" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NoticeMaping" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkState" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OrderState" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NoticeBs" Relationship="PickupDBModel.FK_NoticeB_NoticeA" FromRole="NoticeA" ToRole="NoticeB" />
+    <Property Name="shipOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="shipImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="shipSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NoticeB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="Barcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Demand" Type="Int32" />
+    <Property Name="Shipment" Type="Int32" />
+    <Property Name="Location1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Maping" Type="Int64" />
+    <NavigationProperty Name="NoticeA" Relationship="PickupDBModel.FK_NoticeB_NoticeA" FromRole="NoticeB" ToRole="NoticeA" />
+  </EntityType>
+  <Association Name="FK_NoticeB_NoticeA">
+    <End Type="PickupDBModel.NoticeA" Role="NoticeA" Multiplicity="0..1" />
+    <End Type="PickupDBModel.NoticeB" Role="NoticeB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NoticeA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NoticeB">
+        <PropertyRef Name="Maping" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

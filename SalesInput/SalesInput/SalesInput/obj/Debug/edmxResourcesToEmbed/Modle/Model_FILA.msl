@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FILAModelStoreContainer" CdmEntityContainer="FILAEntities1">
+    <EntitySetMapping Name="PickupA">
+      <EntityTypeMapping TypeName="FILAModel.PickupA">
+        <MappingFragment StoreEntitySet="PickupA">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderStore" ColumnName="OrderStore" />
+          <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="OrderAmount" ColumnName="OrderAmount" />
+          <ScalarProperty Name="OrderSate" ColumnName="OrderSate" />
+          <ScalarProperty Name="OrderUploade" ColumnName="OrderUploade" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderStaff" ColumnName="OrderStaff" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PickupB">
+      <EntityTypeMapping TypeName="FILAModel.PickupB">
+        <MappingFragment StoreEntitySet="PickupB">
+          <ScalarProperty Name="OrderSN" ColumnName="OrderSN" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="Order_Location" ColumnName="Order_Location" />
+          <ScalarProperty Name="Order_Type" ColumnName="Order_Type" />
+          <ScalarProperty Name="Order_Color" ColumnName="Order_Color" />
+          <ScalarProperty Name="Order_Size" ColumnName="Order_Size" />
+          <ScalarProperty Name="Order_Amount" ColumnName="Order_Amount" />
+          <ScalarProperty Name="Order_PickAmount" ColumnName="Order_PickAmount" />
+          <ScalarProperty Name="Order_Barcode" ColumnName="Order_Barcode" />
+          <ScalarProperty Name="Order_BoxNum" ColumnName="Order_BoxNum" />
+          <ScalarProperty Name="Order_BoxState" ColumnName="Order_BoxState" />
+          <ScalarProperty Name="Order_Store" ColumnName="Order_Store" />
+          <ScalarProperty Name="Order_State" ColumnName="Order_State" />
+          <ScalarProperty Name="Order_Location2" ColumnName="Order_Location2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="FILAModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="account" ColumnName="account" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="groupType" ColumnName="groupType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

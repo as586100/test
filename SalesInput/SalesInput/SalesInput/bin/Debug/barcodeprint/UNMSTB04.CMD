@@ -1,0 +1,3 @@
+CD C:\¦çªA\
+TranE.exe UNMSTB04.INI UNMSTB04.TXT
+CD C:\Program Files\WELLAN\PJCODE\

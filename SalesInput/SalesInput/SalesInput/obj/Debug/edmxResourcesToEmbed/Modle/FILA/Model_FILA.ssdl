@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FILAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PickupA">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="OrderStore" Type="nvarchar" MaxLength="15" />
+    <Property Name="OrderName" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderAmount" Type="bigint" />
+    <Property Name="OrderSate" Type="nvarchar" MaxLength="10" />
+    <Property Name="OrderUploade" Type="nvarchar" MaxLength="10" />
+    <Property Name="OrderDate" Type="date" />
+    <Property Name="OrderStaff" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="PickupB">
+    <Key>
+      <PropertyRef Name="OrderSN" />
+    </Key>
+    <Property Name="OrderSN" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Order_Location" Type="nvarchar" MaxLength="15" />
+    <Property Name="Order_Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Order_Color" Type="nvarchar" MaxLength="15" />
+    <Property Name="Order_Size" Type="nvarchar" MaxLength="15" />
+    <Property Name="Order_Amount" Type="bigint" />
+    <Property Name="Order_PickAmount" Type="bigint" />
+    <Property Name="Order_Barcode" Type="nvarchar" MaxLength="12" />
+    <Property Name="Order_BoxNum" Type="bigint" />
+    <Property Name="Order_BoxState" Type="nvarchar" MaxLength="15" />
+    <Property Name="Order_Store" Type="nvarchar" MaxLength="15" />
+    <Property Name="Order_State" Type="nvarchar" MaxLength="15" />
+    <Property Name="Order_Location2" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="account" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="groupType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Table_1_PickupA">
+    <End Role="PickupA" Type="Self.PickupA" Multiplicity="1" />
+    <End Role="PickupB" Type="Self.PickupB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PickupA">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="PickupB">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FILAModelStoreContainer">
+    <EntitySet Name="PickupA" EntityType="Self.PickupA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PickupB" EntityType="Self.PickupB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Table_1_PickupA" Association="Self.FK_Table_1_PickupA">
+      <End Role="PickupA" EntitySet="PickupA" />
+      <End Role="PickupB" EntitySet="PickupB" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

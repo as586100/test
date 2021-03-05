@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FILAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PickupA">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderStore" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="OrderName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrderAmount" Type="Int64" />
+    <Property Name="OrderSate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OrderUploade" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="OrderStaff" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PickupB" Relationship="Self.FK_Table_1_PickupA" FromRole="PickupA" ToRole="PickupB" />
+  </EntityType>
+  <EntityType Name="PickupB">
+    <Key>
+      <PropertyRef Name="OrderSN" />
+    </Key>
+    <Property Name="OrderSN" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order_Location" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Color" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Size" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Amount" Type="Int64" />
+    <Property Name="Order_PickAmount" Type="Int64" />
+    <Property Name="Order_Barcode" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Order_BoxNum" Type="Int64" />
+    <Property Name="Order_BoxState" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Store" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_State" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Order_Location2" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PickupA" Relationship="Self.FK_Table_1_PickupA" FromRole="PickupB" ToRole="PickupA" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="groupType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Table_1_PickupA">
+    <End Role="PickupA" Type="Self.PickupA" Multiplicity="1" />
+    <End Role="PickupB" Type="Self.PickupB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PickupA">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="PickupB">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FILAEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PickupA" EntityType="Self.PickupA" />
+    <EntitySet Name="PickupB" EntityType="Self.PickupB" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <AssociationSet Name="FK_Table_1_PickupA" Association="Self.FK_Table_1_PickupA">
+      <End Role="PickupA" EntitySet="PickupA" />
+      <End Role="PickupB" EntitySet="PickupB" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
